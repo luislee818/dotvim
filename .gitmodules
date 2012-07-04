@@ -14,3 +14,7 @@
 	path = bundle/surround
 	url = git://github.com/tpope/vim-surround.git
 	ignore = dirty
+[submodule "bundle/taskpaper"]
+	path = bundle/taskpaper
+	url = git://github.com/davidoc/taskpaper.vim.git
+	ignore = dirty
