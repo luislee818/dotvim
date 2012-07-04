@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/Dapeng/Dropbox/Scripts/PragProg_Rails/rails32/depot_v/test/unit'
+let g:netrw_dirhist_2='/Users/Dapeng/Dropbox/Scripts/Node'
+let g:netrw_dirhist_3='/Users/Dapeng/Dropbox/Scripts/Node/node_modules'
+let g:netrw_dirhist_4='/Users/Dapeng/Dropbox/Scripts/Node'
+let g:netrw_dirhist_5='/Users/Dapeng/Dropbox/Scripts/Node/Regex'
