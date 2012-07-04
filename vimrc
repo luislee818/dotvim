@@ -1,3 +1,6 @@
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 set nu  " turn on line numbering
 set nrformats=  " treat numbers as decimals (default is octal)
 set shiftwidth=2 softtabstop=2 expandtab  "  tab settings
