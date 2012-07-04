@@ -6,3 +6,7 @@
 	path = bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
 	ignore = dirty
+[submodule "bundle/ragtag"]
+	path = bundle/ragtag
+	url = git://github.com/tpope/vim-ragtag.git
+	ignore = dirty
