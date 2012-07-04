@@ -12,3 +12,4 @@ set backspace=indent,eol,start  " Backspace over everything in insert mode, http
 syntax on  " enable syntax
 filetype plugin indent on  " enable filetype plugin
 
+set directory^=$HOME/.vim_swap//   "put all swap files together in one place
