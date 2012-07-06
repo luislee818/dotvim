@@ -22,3 +22,7 @@
 	path = bundle/commentary
 	url = https://github.com/tpope/vim-commentary.git
 	ignore = dirty
+[submodule "bundle/vividchalk"]
+	path = bundle/vividchalk
+	url = https://github.com/tpope/vim-vividchalk.git
+	ignore = dirty
