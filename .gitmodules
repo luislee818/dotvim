@@ -30,3 +30,7 @@
 	path = bundle/railscasts
 	url = http://github.com/luislee818/vim-railscasts.git
 	ignore = dirty
+[submodule "bundle/easymotion"]
+	path = bundle/easymotion
+	url = http://github.com/Lokaltog/vim-easymotion.git
+	ignore = dirty
