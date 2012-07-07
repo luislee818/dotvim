@@ -26,6 +26,3 @@
 	path = bundle/vividchalk
 	url = https://github.com/tpope/vim-vividchalk.git
 	ignore = dirty
-[submodule "bundle/railscasts"]
-	path = bundle/railscasts
-	url = https://github.com/jgdavey/vim-railscasts.git
