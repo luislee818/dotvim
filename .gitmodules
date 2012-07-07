@@ -34,3 +34,7 @@
 	path = bundle/easymotion
 	url = http://github.com/Lokaltog/vim-easymotion.git
 	ignore = dirty
+[submodule "bundle/NERDTree"]
+	path = bundle/NERDTree
+	url = http://github.com/scrooloose/nerdtree.git
+	ignore = dirty
