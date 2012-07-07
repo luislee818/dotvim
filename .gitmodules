@@ -16,13 +16,17 @@
 	ignore = dirty
 [submodule "bundle/commentary"]
 	path = bundle/commentary
-	url = https://github.com/tpope/vim-commentary.git
+	url = http://github.com/tpope/vim-commentary.git
 	ignore = dirty
 [submodule "bundle/vividchalk"]
 	path = bundle/vividchalk
-	url = https://github.com/tpope/vim-vividchalk.git
+	url = http://github.com/tpope/vim-vividchalk.git
 	ignore = dirty
 [submodule "bundle/taskpaper"]
 	path = bundle/taskpaper
-	url = https://github.com/luislee818/taskpaper.vim.git
+	url = http://github.com/luislee818/taskpaper.vim.git
+	ignore = dirty
+[submodule "bundle/railscasts"]
+	path = bundle/railscasts
+	url = http://github.com/luislee818/vim-railscasts.git
 	ignore = dirty
