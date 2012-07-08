@@ -42,3 +42,7 @@
 	path = bundle/endwise
 	url = http://github.com/tpope/vim-endwise.git
 	ignore = dirty
+[submodule "bundle/jasmine"]
+	path = bundle/jasmine
+	url = http://github.com/luislee818/jasmine.vim.git
+	ignore = dirty
