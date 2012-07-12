@@ -46,3 +46,7 @@
 	path = bundle/jasmine
 	url = http://github.com/luislee818/jasmine.vim.git
 	ignore = dirty
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = http://github.com/mileszs/ack.vim.git
+	ignore = dirty
