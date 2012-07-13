@@ -50,3 +50,7 @@
 	path = bundle/ack
 	url = http://github.com/mileszs/ack.vim.git
 	ignore = dirty
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = http://github.com/kien/ctrlp.vim.git
+	url = http://github.com/kien/ctrlp.vim.git
