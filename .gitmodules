@@ -58,3 +58,7 @@
 	path = bundle/syntastic
 	url = http://github.com/scrooloose/syntastic.git
 	ignore = dirty
+[submodule "bundle/jshint"]
+	path = bundle/jshint
+	url = http://github.com/walm/jshint.vim.git
+	ignore = dirty
