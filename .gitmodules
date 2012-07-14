@@ -53,4 +53,8 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = http://github.com/kien/ctrlp.vim.git
-	url = http://github.com/kien/ctrlp.vim.git
+	ignore = dirty
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = http://github.com/scrooloose/syntastic.git
+	ignore = dirty
