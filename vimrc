@@ -13,4 +13,6 @@ syntax on  " enable syntax
 filetype plugin indent on  " enable filetype plugin
 
 set directory^=$HOME/.vim_swap//   "put all swap files together in one place
-let g:syntastic_javascript_syntax_checker="jshint"  " use JSHint in Syntastic plugin
+
+let g:syntastic_auto_loc_list=1  " Syntastic: automatically open and close quick fix window for errors
+let g:syntastic_javascript_checker="jshint"  " Syntastic: use JSHint in Syntastic plugin
