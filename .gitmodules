@@ -70,3 +70,7 @@
 	path = bundle/supertab
 	url = http://github.com/ervandew/supertab.git
 	ignore = dirty
+[submodule "bundle/solarized"]
+	path = bundle/solarized
+	url = http://github.com/altercation/vim-colors-solarized.git
+	ignore = dirty
