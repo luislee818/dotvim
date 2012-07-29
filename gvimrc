@@ -1,4 +1,5 @@
 set guifont=Monaco:h12
+set background=dark
 colorscheme solarized
 
 " Invisible character colors
