@@ -2,7 +2,7 @@ call pathogen#infect()
 
 set nu  " turn on line numbering
 set nrformats=  " treat numbers as decimals (default is octal)
-set tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab  "  tab settings
+set tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab  "  tab settings
 set wildmode=longest,list  " bash-style tab completion
 set history=200  " record 200 Ex commands in history
 set autoindent  " turn on autoindent
