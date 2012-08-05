@@ -16,6 +16,9 @@ set listchars=tab:▸\ ,eol:¬  " Use the same symbols as TextMate for tabstops 
 syntax on  " enable syntax
 filetype plugin indent on  " enable filetype plugin
 
+" (uncommet on Windows) Fix snippet issue on Windows
+" let snippets_dir = substitute(substitute(globpath(&rtp, 'snippets/'), "\n", ',', 'g'), 'snippets\\,', 'snippets,', 'g')
+
 set directory^=$HOME/.vim_swap//   "put all swap files together in one place
 
 " Syntastic plugin
