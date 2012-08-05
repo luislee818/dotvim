@@ -34,20 +34,20 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 map <LocalLeader>c :call GenerateDOCComment()<cr>
 
 function! GenerateDOCComment()
-  let l    = line('.')
-  let i    = indent(l)
-  let pre  = repeat(' ',i)
-  let text = getline(l)
-  let params   = matchstr(text,'([^)]*)')
-  let paramPat = '\([$a-zA-Z_0-9]\+\)[, ]*\(.*\)'
-  echomsg params
-  let vars = []
-  let m    = ' '
-  let ml = matchlist(params,paramPat)
+	let l    = line('.')
+	let i    = indent(l)
+	let pre  = repeat(' ',i)
+	let text = getline(l)
+	let params   = matchstr(text,'([^)]*)')
+	let paramPat = '\([$a-zA-Z_0-9]\+\)[, ]*\(.*\)'
+	echomsg params
+	let vars = []
+	let m    = ' '
+	let ml = matchlist(params,paramPat)
 
 	if ml==[]  " no parameter
-    let vars += [pre.' * @memberOf ']
-    let vars += [pre.' * @function']
+		let vars += [pre.' * @memberOf ']
+		let vars += [pre.' * @function']
 		let vars += [pre.' * @return {} ']
 	endif
 
@@ -65,9 +65,9 @@ function! GenerateDOCComment()
 		let vars += [pre.' * @return {} ']
 	endif
 
-  let comment = [pre.'/**',pre.' * ',pre.' *'] + vars + [pre.' */']
-  call append(l-1,comment)
-  call cursor(l+1,i+3)
+	let comment = [pre.'/**',pre.' * ',pre.' *'] + vars + [pre.' */']
+	call append(l-1,comment)
+	call cursor(l+1,i+3)
 endfunction
 
 " show unwanted whitespaces
@@ -83,45 +83,45 @@ highlight ExtraWhitespace ctermbg=darkred guibg=darkred
 "   s  spaces before a tab
 "   t  tabs not at start of line
 function! ShowWhitespace(flags)
-  let bad = ''
-  let pat = []
-  for c in split(a:flags, '\zs')
-    if c == 'e'
-      call add(pat, '\s\+$')
-    elseif c == 'i'
-      call add(pat, '^\t*\zs \+')
-    elseif c == 's'
-      call add(pat, ' \+\ze\t')
-    elseif c == 't'
-      call add(pat, '[^\t]\zs\t\+')
-    else
-      let bad .= c
-    endif
-  endfor
-  if len(pat) > 0
-    let s = join(pat, '\|')
-    exec 'syntax match ExtraWhitespace "'.s.'" containedin=ALL'
-  else
-    syntax clear ExtraWhitespace
-  endif
-  if len(bad) > 0
-    echo 'ShowWhitespace ignored: '.bad
-  endif
+	let bad = ''
+	let pat = []
+	for c in split(a:flags, '\zs')
+		if c == 'e'
+			call add(pat, '\s\+$')
+		elseif c == 'i'
+			call add(pat, '^\t*\zs \+')
+		elseif c == 's'
+			call add(pat, ' \+\ze\t')
+		elseif c == 't'
+			call add(pat, '[^\t]\zs\t\+')
+		else
+			let bad .= c
+		endif
+	endfor
+	if len(pat) > 0
+		let s = join(pat, '\|')
+		exec 'syntax match ExtraWhitespace "'.s.'" containedin=ALL'
+	else
+		syntax clear ExtraWhitespace
+	endif
+	if len(bad) > 0
+		echo 'ShowWhitespace ignored: '.bad
+	endif
 endfunction
 
 function! ToggleShowWhitespace()
-  if !exists('b:ws_show')
-    let b:ws_show = 0
-  endif
-  if !exists('b:ws_flags')
-    let b:ws_flags = 'eist'  " default (which whitespace to show)
-  endif
-  let b:ws_show = !b:ws_show
-  if b:ws_show
-    call ShowWhitespace(b:ws_flags)
-  else
-    call ShowWhitespace('')
-  endif
+	if !exists('b:ws_show')
+		let b:ws_show = 0
+	endif
+	if !exists('b:ws_flags')
+		let b:ws_flags = 'eist'  " default (which whitespace to show)
+	endif
+	let b:ws_show = !b:ws_show
+	if b:ws_show
+		call ShowWhitespace(b:ws_flags)
+	else
+		call ShowWhitespace('')
+	endif
 endfunction
 
 " sample highlight (space or tab) syntax
