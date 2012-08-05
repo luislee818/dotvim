@@ -120,3 +120,9 @@ function! ToggleShowWhitespace()
     call ShowWhitespace('')
   endif
 endfunction
+
+" sample highlight (space or tab) syntax
+"highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
+"highlight ExtraTabs ctermbg=red guibg=red
+"match ExtraWhitespace /\s\+$/
+"match ExtraTabs /\t\+/
