@@ -29,6 +29,12 @@ let g:syntastic_javascript_checker="jshint"  " Syntastic: use JSHint in Syntasti
 " Tagbar: use F9 to toggle
 nnoremap <silent> <F9> :TagbarToggle<CR>
 
+" Taglist-plus plugin
+nnoremap <silent> <F8> :TlistToggle<CR>
+let Tlist_Use_Right_Window=1  " Taglist-plus: display window on the right
+let Tlist_Show_One_File=1  " Taglist-plus: show tags for teh current buffer only
+let Tlist_GainFocus_On_ToggleOpen=1  " Taglist-plus: move focus to taglist when :TlistToggle command was invoked
+
 " generate jsdoc comment template
 " starts from http://stackoverflow.com/questions/7942738/vim-plugin-to-generate-javascript-documentation-comments
 map <LocalLeader>c :call GenerateDOCComment()<cr>
@@ -133,3 +139,4 @@ endfunction
 " 100-character guide http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
 highlight OverLength ctermbg=red ctermfg=white guibg=#cb4b16
 match OverLength /\%101v.\+/
+

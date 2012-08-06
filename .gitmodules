@@ -74,3 +74,7 @@
 	path = bundle/solarized
 	url = http://github.com/altercation/vim-colors-solarized.git
 	ignore = dirty
+[submodule "bundle/taglist-plus"]
+	path = bundle/taglist-plus
+	url = http://github.com/int3/vim-taglist-plus.git
+	ignore = dirty
