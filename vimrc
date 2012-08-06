@@ -129,3 +129,7 @@ endfunction
 "highlight ExtraTabs ctermbg=red guibg=red
 "match ExtraWhitespace /\s\+$/
 "match ExtraTabs /\t\+/
+
+" 100-character guide http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
+highlight OverLength ctermbg=red ctermfg=white guibg=#cb4b16
+match OverLength /\%101v.\+/
