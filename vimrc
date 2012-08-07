@@ -35,6 +35,12 @@ let Tlist_Use_Right_Window=1  " Taglist-plus: display window on the right
 let Tlist_Show_One_File=1  " Taglist-plus: show tags for teh current buffer only
 let Tlist_GainFocus_On_ToggleOpen=1  " Taglist-plus: move focus to taglist when :TlistToggle command was invoked
 
+" ctrlp plugin - ignore the following file/dir
+let g:ctrlp_custom_ignore = {
+\	'dir': '\.git$\|build$\|lib$\|docs$',
+\	'file': '\.exe$\|\.dll$\|\.pdb$\|\.jpg$\|\.png$\|\.gif$\|\.pdf$'
+\	}
+
 " generate jsdoc comment template
 " starts from http://stackoverflow.com/questions/7942738/vim-plugin-to-generate-javascript-documentation-comments
 map <LocalLeader>c :call GenerateDOCComment()<cr>
