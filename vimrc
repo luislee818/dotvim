@@ -147,4 +147,4 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#cb4b16
 match OverLength /\%101v.\+/
 
 " map leader-U to upcase the current word
-nmap \U gUiw
+nmap <leader>U gUiw
