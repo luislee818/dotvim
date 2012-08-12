@@ -146,5 +146,8 @@ endfunction
 highlight OverLength ctermbg=red ctermfg=white guibg=#cb4b16
 match OverLength /\%101v.\+/
 
+" 100-character guide with colorcolumn feature in Vim 7.3
+set colorcolumn=100
+highlight ColorColumn ctermbg=red ctermfg=white guibg=#cb4b16
 " map leader-U to upcase the current word
 nmap <leader>U gUiw
