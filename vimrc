@@ -6,6 +6,7 @@ set wildmode=longest,list  " bash-style tab completion
 set history=200  " record 200 Ex commands in history
 set autoindent  " turn on autoindent
 set hlsearch  " turn on highlight for search
+set incsearch  " turn on incrementing search
 set backspace=indent,eol,start  " Backspace over everything in insert mode, http://superuser.com/questions/202848/backspace-key-not-working-in-vim
 
 " Indentation settings
@@ -143,11 +144,12 @@ endfunction
 "match ExtraTabs /\t\+/
 
 " 100-character guide http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
-highlight OverLength ctermbg=red ctermfg=white guibg=#cb4b16
-match OverLength /\%101v.\+/
+" match OverLength /\%101v.\+/
+" au BufWinEnter * let w:m1=matchadd('OverLength', '\%101v.\+', -1)
 
 " 100-character guide with colorcolumn feature in Vim 7.3
 set colorcolumn=100
-highlight ColorColumn ctermbg=red ctermfg=white guibg=#cb4b16
+au BufWinEnter * highlight ColorColumn ctermbg=red ctermfg=white guibg=#cb4b16
+
 " map leader-U to upcase the current word
 nmap <leader>U gUiw
