@@ -149,7 +149,7 @@ endfunction
 
 " 100-character guide with colorcolumn feature in Vim 7.3
 set colorcolumn=100
-au BufWinEnter * highlight ColorColumn ctermbg=red ctermfg=white guibg=#cb4b16
+" au BufWinEnter * highlight ColorColumn ctermbg=red ctermfg=white guibg=#cb4b16
 
 " map leader-U to upcase the current word
 nmap <leader>U gUiw
