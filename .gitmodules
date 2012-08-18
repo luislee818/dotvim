@@ -78,3 +78,7 @@
 	path = bundle/taglist-plus
 	url = http://github.com/int3/vim-taglist-plus.git
 	ignore = dirty
+[submodule "bundle/ps1.vim"]
+	path = bundle/ps1.vim
+	url = http://github.com/PProvost/vim-ps1.git
+	ignore = dirty
