@@ -153,3 +153,7 @@ set colorcolumn=100
 
 " map leader-U to upcase the current word
 nmap <leader>U gUiw
+
+" map command to custom script for TFS shortcuts
+command Tco !t co "%:p"
+command Tundo !t undo "%:p"
