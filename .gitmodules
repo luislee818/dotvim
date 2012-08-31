@@ -82,3 +82,7 @@
 	path = bundle/ps1.vim
 	url = http://github.com/PProvost/vim-ps1.git
 	ignore = dirty
+[submodule "bundle/trailing-whitespace"]
+	path = bundle/trailing-whitespace
+	url = http://github.com/bronson/vim-trailing-whitespace.git
+	ignore = dirty
