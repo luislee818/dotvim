@@ -43,7 +43,7 @@ let g:ctrlp_custom_ignore = {
 \	}
 
 " vim-trailing-whitespace plugin
-nmap _=:FixWhitespace<CR>
+nmap <leader>ws :FixWhitespace<CR>
 
 " generate jsdoc comment template
 " starts from http://stackoverflow.com/questions/7942738/vim-plugin-to-generate-javascript-documentation-comments
@@ -104,8 +104,8 @@ set colorcolumn=100
 nmap <leader>U gUiw
 
 " map command to custom script for TFS shortcuts
-command Tco !t co "%:p"
-command Tundo !t undo "%:p"
+command! Tco !t co "%:p"
+command! Tundo !t undo "%:p"
 
 if has('win32') || has('win64')
 	imap <c-j>d <c-r>=system('node %USERPROFILE%\vimfiles\utils\guid.js')<cr>
