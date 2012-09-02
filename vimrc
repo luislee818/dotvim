@@ -110,5 +110,5 @@ command! Tundo !t undo "%:p"
 if has('win32') || has('win64')
 	imap <c-j>d <c-r>=system('node %USERPROFILE%\vimfiles\utils\guid.js')<cr>
 else
-	imap <c-j>d <c-r>=system('node ~/vimfiles/utils/guid.js')<cr>
+	imap <c-j>d <c-r>=system('node ~/.vim/utils/guid.js')<cr>
 endif
