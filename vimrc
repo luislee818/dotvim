@@ -112,3 +112,7 @@ if has('win32') || has('win64')
 else
 	imap <c-j>d <c-r>=system('node ~/.vim/utils/guid.js')<cr>
 endif
+
+" map ctrl+p/n to Up/Down (filters commands in history)
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
