@@ -86,7 +86,3 @@
 	path = bundle/trailing-whitespace
 	url = http://github.com/bronson/vim-trailing-whitespace.git
 	ignore = dirty
-[submodule "bundle/specky_rspec"]
-	path = bundle/specky_rspec
-	url = http://github.com/vim-scripts/Specky.git
-	ignore = dirty
