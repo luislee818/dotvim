@@ -1,5 +1,10 @@
 call pathogen#infect()
 
+" Hide gVim toolbar
+set guioptions-=T
+" Hide gVim menu bar
+set guioptions-=m
+
 set nu  " turn on line numbering
 set nrformats=  " treat numbers as decimals (default is octal)
 set wildmode=longest,list  " bash-style tab completion
