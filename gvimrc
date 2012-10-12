@@ -1,4 +1,5 @@
-set guifont=Monaco:h12
+set guifont=DejaVu_Sans_Mono:h11
+set linespace=2
 set background=dark
 colorscheme solarized
 
