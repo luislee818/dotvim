@@ -4,8 +4,13 @@ call pathogen#infect()
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
+
+set guioptions-=T  " Hide gVim toolbar
+set guioptions-=m  " Hide gVim menu bar
+
 set hidden  " allow unsaved background buffers and remember marks/undo for them
 set number  " turn on line numbering
+set laststatus=2  " always show command line
 set nrformats=  " treat numbers as decimals (default is octal)
 set wildmode=longest,list  " bash-style tab completion
 set history=200  " record 200 Ex commands in history
@@ -13,7 +18,6 @@ set autoindent  " turn on autoindent
 set backspace=indent,eol,start  " Backspace over everything in insert mode, http://superuser.com/questions/202848/backspace-key-not-working-in-vim
 set cursorline  " highlight current line
 set showmatch  " jumps to opening bracket briefly
-set laststatus=2  " always show command line
 
 set hlsearch  " turn on highlight for search
 set incsearch  " turn on incrementing search
