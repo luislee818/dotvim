@@ -1,27 +1,87 @@
 call pathogen#infect()
 
-set nu  " turn on line numbering
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" BASIC EDITING CONFIGURATION
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+set hidden  " allow unsaved background buffers and remember marks/undo for them
+set number  " turn on line numbering
 set nrformats=  " treat numbers as decimals (default is octal)
 set wildmode=longest,list  " bash-style tab completion
 set history=200  " record 200 Ex commands in history
 set autoindent  " turn on autoindent
+set backspace=indent,eol,start  " Backspace over everything in insert mode, http://superuser.com/questions/202848/backspace-key-not-working-in-vim
+set cursorline  " highlight current line
+set showmatch  " jumps to opening bracket briefly
+set laststatus=2  " always show command line
+
 set hlsearch  " turn on highlight for search
 set incsearch  " turn on incrementing search
-set backspace=indent,eol,start  " Backspace over everything in insert mode, http://superuser.com/questions/202848/backspace-key-not-working-in-vim
+set ignorecase smartcase  " make searches case-sensitive only if they contain upper-case characters
 
-" Indentation settings
 set tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab  "  tab settings
-nmap <leader>l :set list!<CR>  " Shortcut to rapidly toggle `set list`
 set listchars=tab:▸\ ,eol:¬  " Use the same symbols as TextMate for tabstops and EOLs
 
 syntax on  " enable syntax
 filetype plugin indent on  " enable filetype plugin
 
+set directory^=$HOME/.vim_swap//   "put all swap files together in one place
+
+let mapleader=","
+
 " (uncommet on Windows) Fix snippet issue on Windows
 " let snippets_dir = substitute(substitute(globpath(&rtp, 'snippets/'), "\n", ',', 'g'), 'snippets\\,', 'snippets,', 'g')
 
-set directory^=$HOME/.vim_swap//   "put all swap files together in one place
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" STATUS LINE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MISC KEY MAPS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Make copying to system clipboard easier
+map <leader>y "+y
+nmap <leader>l :set list!<CR>  " Shortcut to rapidly toggle `set list`
+
+" Move around splits with <c-hjkl>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" Clear the search buffer when hitting return
+function! MapCR()
+  nnoremap <cr> :nohlsearch<cr>
+endfunction
+call MapCR()
+nnoremap <leader><leader> <c-^>
+
+" map ctrl+p/n to Up/Down (filters commands in history)
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+" map leader-U to upcase the current word
+nmap <leader>U gUiw
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ARROW KEYS ARE UNACCEPTABLE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" OPEN FILES IN DIRECTORY OF CURRENT FILE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CONFIGS FOR PLUGINS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic plugin
 let g:syntastic_auto_loc_list=1  " Syntastic: automatically open and close quick fix window for errors
 let g:syntastic_javascript_checker="jshint"  " Syntastic: use JSHint in Syntastic plugin
@@ -45,6 +105,23 @@ let g:ctrlp_custom_ignore = {
 " vim-trailing-whitespace plugin
 nmap <leader>ws :FixWhitespace<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RENAME CURRENT FILE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+endfunction
+map <leader>n :call RenameFile()<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FOR JsDoc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " generate jsdoc comment template
 " starts from http://stackoverflow.com/questions/7942738/vim-plugin-to-generate-javascript-documentation-comments
 map <LocalLeader>c :call GenerateDOCComment()<cr>
@@ -86,12 +163,9 @@ function! GenerateDOCComment()
 	call cursor(l+1,i+3)
 endfunction
 
-" sample highlight (space or tab) syntax
-"highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
-"highlight ExtraTabs ctermbg=red guibg=red
-"match ExtraWhitespace /\s\+$/
-"match ExtraTabs /\t\+/
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SHOW GUIDELINE AT 100 CHARACTER
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 100-character guide http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
 " match OverLength /\%101v.\+/
 " au BufWinEnter * let w:m1=matchadd('OverLength', '\%101v.\+', -1)
@@ -100,19 +174,27 @@ endfunction
 set colorcolumn=100
 " au BufWinEnter * highlight ColorColumn ctermbg=red ctermfg=white guibg=#cb4b16
 
-" map leader-U to upcase the current word
-nmap <leader>U gUiw
-
-" map command to custom script for TFS shortcuts
-command! Tco !t co "%:p"
-command! Tundo !t undo "%:p"
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" INVOKE CUSTOM NODE.JS SCRIPT
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('win32') || has('win64')
 	imap <c-j>d <c-r>=system('node %USERPROFILE%\vimfiles\utils\guid.js')<cr>
 else
 	imap <c-j>d <c-r>=system('node ~/.vim/utils/guid.js')<cr>
 endif
 
-" map ctrl+p/n to Up/Down (filters commands in history)
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" INVOKE CUSTOM SHELL SCRIPTS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" map command to custom script for TFS shortcuts
+command! Tco !t co "%:p"
+command! Tundo !t undo "%:p"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" JUNKDRAWER
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" sample highlight (space or tab) syntax
+"highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
+"highlight ExtraTabs ctermbg=red guibg=red
+"match ExtraWhitespace /\s\+$/
+"match ExtraTabs /\t\+/
