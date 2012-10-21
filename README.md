@@ -14,3 +14,5 @@ Switch to the `~/.vim` directory, and fetch submodules:
     git submodule update
 
 Borrowed from [Drew Neil](https://github.com/nelstrom/dotvim), see [his episode of VimCast](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/) for details.
+
+...also stole from [Gary Bernhardt's dot files](https://github.com/garybernhardt/dotfiles).
