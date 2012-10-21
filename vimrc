@@ -31,10 +31,19 @@ filetype plugin indent on  " enable filetype plugin
 
 set directory^=$HOME/.vim_swap//   "put all swap files together in one place
 
+highlight Search cterm=underline  " use underline in color terminal for search matches
+
 let mapleader=","
 
 " (uncommet on Windows) Fix snippet issue on Windows
 " let snippets_dir = substitute(substitute(globpath(&rtp, 'snippets/'), "\n", ',', 'g'), 'snippets\\,', 'snippets,', 'g')
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" COLOR
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set t_Co=256 " 256 colors
+set background=dark
+color grb256
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
