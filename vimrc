@@ -63,11 +63,11 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Clear the search buffer when hitting ctrl-h
-function! MapC_H()
-  nnoremap <c-h> :nohlsearch<cr>
+" Clear the search buffer when hitting ctrl-n
+function! MapC_N()
+  nnoremap <c-n> :nohlsearch<cr>
 endfunction
-call MapC_H()
+call MapC_N()
 nnoremap <leader><leader> <c-^>
 
 " map ctrl+p/n to Up/Down (filters commands in history)
