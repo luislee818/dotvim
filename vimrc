@@ -77,6 +77,9 @@ cnoremap <C-n> <Down>
 " map leader-U to upcase the current word
 nmap <leader>U gUiw
 
+" map space to toggle fold
+nnoremap <Space> za
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ARROW KEYS ARE UNACCEPTABLE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
