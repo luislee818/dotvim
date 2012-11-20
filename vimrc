@@ -80,6 +80,12 @@ nmap <leader>U gUiw
 " map space to toggle fold
 nnoremap <Space> za
 
+" Toggle spell checking on and off with `<leader>s`
+nmap <silent> <leader>s :set spell!<CR>
+
+" Set region to American English
+set spelllang=en_us
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ARROW KEYS ARE UNACCEPTABLE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
