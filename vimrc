@@ -146,7 +146,7 @@ map <leader>n :call RenameFile()<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " generate jsdoc comment template
 " starts from http://stackoverflow.com/questions/7942738/vim-plugin-to-generate-javascript-documentation-comments
-map <LocalLeader>c :call GenerateDOCComment()<cr>
+map <leader>c :call GenerateDOCComment()<cr>
 
 function! GenerateDOCComment()
 	let l    = line('.')
