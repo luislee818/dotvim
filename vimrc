@@ -192,10 +192,25 @@ endfunction
 " match OverLength /\%101v.\+/
 " au BufWinEnter * let w:m1=matchadd('OverLength', '\%101v.\+', -1)
 
-" 100-character guide with colorcolumn feature in Vim 7.3
-set colorcolumn=100
 " au BufWinEnter * highlight ColorColumn ctermbg=red ctermfg=white guibg=#cb4b16
 
+" toggle colored red right border after 100 chars
+" guide with colorcolumn feature in Vim 7.3
+set colorcolumn=101
+let s:color_column_old = 0
+
+function! s:ToggleColorColumn()
+	if s:color_column_old == 0
+		let s:color_column_old = &colorcolumn
+		windo let &colorcolumn = 0
+	else
+		windo let &colorcolumn=s:color_column_old
+		let s:color_column_old = 0
+	endif
+endfunction
+
+" map ,g to toggle guide line
+nnoremap <Leader>g :call <SID>ToggleColorColumn()<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " INVOKE CUSTOM NODE.JS SCRIPT
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
