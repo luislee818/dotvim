@@ -80,6 +80,10 @@ nmap <leader>U gUiw
 " map space to toggle fold
 nnoremap <Space> za
 
+" map shortcuts to change foldmethod
+map <leader>fi :setlocal foldmethod=indent<cr>
+map <leader>fs :setlocal foldmethod=syntax<cr>
+
 " Toggle spell checking on and off with `<leader>s`
 nmap <silent> <leader>s :set spell!<CR>
 
