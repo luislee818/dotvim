@@ -98,3 +98,7 @@
 	path = bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
 	ignore = dirty
+[submodule "bundle/visual-star-search"]
+	path = bundle/visual-star-search
+	url = http://github.com/nelstrom/vim-visual-star-search.git
+	ignore = dirty
