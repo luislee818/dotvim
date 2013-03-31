@@ -63,6 +63,9 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" Insert a hash rocket with <c-l>
+imap <c-l> <space>=><space>
+
 " Clear the search buffer when hitting ctrl-n
 function! MapC_N()
   nnoremap <c-n> :nohlsearch<cr>
@@ -132,18 +135,68 @@ let g:ctrlp_custom_ignore = {
 nmap <leader>ws :FixWhitespace<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" OPEN FILES IN DIRECTORY OF CURRENT FILE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! RenameFile()
-    let old_name = expand('%')
-    let new_name = input('New file name: ', expand('%'), 'file')
-    if new_name != '' && new_name != old_name
-        exec ':saveas ' . new_name
-        exec ':silent !rm ' . old_name
-        redraw!
-    endif
+	let old_name = expand('%')
+	let new_name = input('New file name: ', expand('%'), 'file')
+	if new_name != '' && new_name != old_name
+		exec ':saveas ' . new_name
+		exec ':silent !rm ' . old_name
+		redraw!
+	endif
 endfunction
 map <leader>n :call RenameFile()<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PROMOTE VARIABLE TO RSPEC LET
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! PromoteToLet()
+	:normal! dd
+	" :exec '?^\s*it\>'
+	:normal! P
+	:.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+	:normal ==
+endfunction
+:command! PromoteToLet :call PromoteToLet()
+:map <leader>p :PromoteToLet<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SWITCH BETWEEN TEST AND PRODUCTION CODE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! OpenTestAlternate()
+	let new_file = AlternateForCurrentFile()
+	exec ':e ' . new_file
+endfunction
+function! AlternateForCurrentFile()
+	let current_file = expand("%")
+	let new_file = current_file
+	let in_spec = match(current_file, '^spec/') != -1
+	let going_to_spec = !in_spec
+	let in_app = match(current_file, '\<controllers\>') != -1 || match(current_file, '\<models\>') != -1 || match(current_file, '\<views\>') != -1 || match(current_file, '\<helpers\>') != -1
+	if going_to_spec
+		if in_app
+			let new_file = substitute(new_file, '^app/', '', '')
+		end
+		let new_file = substitute(new_file, '\.rb$', '_spec.rb', '')
+		let new_file = 'spec/' . new_file
+	else
+		let new_file = substitute(new_file, '_spec\.rb$', '.rb', '')
+		let new_file = substitute(new_file, '^spec/', '', '')
+		if in_app
+			let new_file = 'app/' . new_file
+		end
+	endif
+	return new_file
+endfunction
+nnoremap <leader>. :call OpenTestAlternate()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOR JsDoc
