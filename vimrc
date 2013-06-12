@@ -133,7 +133,7 @@ let Tlist_GainFocus_On_ToggleOpen=1  " Taglist-plus: move focus to taglist when 
 
 " ctrlp plugin - ignore the following file/dir
 let g:ctrlp_custom_ignore = {
-\	'dir': '\.git$\|build$\|lib$\|docs$',
+\	'dir': '\.git$\|build$\|docs$',
 \	'file': '\.exe$\|\.dll$\|\.pdb$\|\.jpg$\|\.png$\|\.gif$\|\.pdf$'
 \	}
 
