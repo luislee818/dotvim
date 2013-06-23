@@ -53,6 +53,9 @@ set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Make saving file easier
+nnoremap <leader>w :w<cr>
+
 " Make copying to system clipboard easier
 map <leader>y "+y
 nmap <leader>l :set list!<CR>  " Shortcut to rapidly toggle `set list`
