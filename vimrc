@@ -56,6 +56,9 @@ set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 " Make saving file easier
 nnoremap <leader>w :w<cr>
 
+" Make setting file type to scheme easier (chose 'r' because it's from Dr. Racket)
+nnoremap <leader>r :set ft=scheme<cr>
+
 " Make copying to system clipboard easier
 map <leader>y "+y
 nmap <leader>l :set list!<CR>  " Shortcut to rapidly toggle `set list`
