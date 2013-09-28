@@ -110,3 +110,7 @@
 	path = bundle/vim-racket
 	url = http://github.com/wlangstroth/vim-racket.git
 	ignore = dirty
+[submodule "bundle/vim-scala"]
+	path = bundle/vim-scala
+	url = http://github.com/derekwyatt/vim-scala.git
+	ignore = dirty
