@@ -105,6 +105,19 @@ nmap <silent> <leader>s :set spell!<CR>
 " Set region to American English
 set spelllang=en_us
 
+function! SolarizedDark()
+	:colorscheme solarized
+	:set background=dark
+endfunction
+
+function! SolarizedLight()
+	:colorscheme solarized
+	:set background=light
+endfunction
+
+map <leader>sd :exec SolarizedDark()<cr>
+map <leader>sl :exec SolarizedLight()<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ARROW KEYS ARE UNACCEPTABLE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
