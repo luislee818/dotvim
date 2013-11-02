@@ -119,6 +119,14 @@ map <leader>sd :exec SolarizedDark()<cr>
 map <leader>sl :exec SolarizedLight()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" AUTO-RESIZE SPLITS, FROM THOUGHTBOT VIM SCREENCAST
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set winwidth=84
+set winheight=5
+set winminheight=5
+set winheight=999
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ARROW KEYS ARE UNACCEPTABLE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <Left> <Nop>
