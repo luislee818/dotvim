@@ -119,6 +119,19 @@ map <leader>sd :exec SolarizedDark()<cr>
 map <leader>sl :exec SolarizedLight()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Toggle relativenumber
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! NumberToggle()
+	if(&relativenumber == 1)
+		set number
+	else
+		set relativenumber
+	endif
+endfunction
+
+nnoremap <leader>rn :call NumberToggle()<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTO-RESIZE SPLITS, FROM THOUGHTBOT VIM SCREENCAST
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set winwidth=84
