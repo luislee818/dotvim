@@ -24,6 +24,7 @@ set incsearch  " turn on incrementing search
 set ignorecase smartcase  " make searches case-sensitive only if they contain upper-case characters
 
 set tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab  "  tab settings
+autocmd FileType ruby setlocal expandtab  "  expandtab for Ruby files
 set listchars=tab:▸\ ,eol:¬  " Use the same symbols as TextMate for tabstops and EOLs
 
 syntax on  " enable syntax
