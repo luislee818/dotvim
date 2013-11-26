@@ -143,8 +143,8 @@ nnoremap <leader>rn :call NumberToggle()<cr>
 " AUTO-RESIZE SPLITS, FROM THOUGHTBOT VIM SCREENCAST
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set winwidth=84
-set winheight=5
-set winminheight=5
+set winheight=8
+set winminheight=8
 set winheight=999
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
