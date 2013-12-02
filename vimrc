@@ -126,6 +126,10 @@ endfunction
 map <leader>sd :exec SolarizedDark()<cr>
 map <leader>sl :exec SolarizedLight()<cr>
 
+
+" set indentation to be four spaces
+map ,tt :set tabstop=4 shiftwidth=4 softtabstop=4 expandtab<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle relativenumber
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
