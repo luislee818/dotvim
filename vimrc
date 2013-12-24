@@ -32,6 +32,13 @@ filetype plugin indent on  " enable filetype plugin
 
 set directory^=$HOME/.vim_swap//   "put all swap files together in one place
 
+" so fugitive.vim will work on Windows
+if has("win32") || has("win64")
+   set directory+=,~/tmp,$TMP
+else
+   set directory=~/tmp
+end
+
 highlight Search cterm=underline  " use underline in color terminal for search matches
 
 let mapleader=","
