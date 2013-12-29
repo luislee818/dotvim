@@ -118,3 +118,7 @@
 	path = vim-repeat
 	url = http://github.com/tpope/vim-repeat.git
 	ignore = dirty
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = http://github.com/vim-ruby/vim-ruby.git
+	ignore = dirty
