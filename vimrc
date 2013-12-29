@@ -49,6 +49,9 @@ autocmd BufReadPost *
 	\   exe "normal! g`\"" |
 	\ endif
 
+" Enable matchit.vim plugin, used by vim-textobj-rubyblock plugin
+runtime macros/matchit.vim
+
 " (uncommet on Windows) Fix snippet issue on Windows
 " let snippets_dir = substitute(substitute(globpath(&rtp, 'snippets/'), "\n", ',', 'g'), 'snippets\\,', 'snippets,', 'g')
 

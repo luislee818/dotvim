@@ -122,3 +122,11 @@
 	path = bundle/vim-ruby
 	url = http://github.com/vim-ruby/vim-ruby.git
 	ignore = dirty
+[submodule "bundle/vim-textobj-rubyblock"]
+	path = bundle/vim-textobj-rubyblock
+	url = http://github.com/nelstrom/vim-textobj-rubyblock.git
+	ignore = dirty
+[submodule "bundle/vim-textobj-user"]
+	path = bundle/vim-textobj-user
+	url = http://github.com/kana/vim-textobj-user.git
+	ignore = dirty
