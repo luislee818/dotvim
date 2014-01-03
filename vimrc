@@ -52,8 +52,10 @@ autocmd BufReadPost *
 " Enable matchit.vim plugin, used by vim-textobj-rubyblock plugin
 runtime macros/matchit.vim
 
-" (uncommet on Windows) Fix snippet issue on Windows
-" let snippets_dir = substitute(substitute(globpath(&rtp, 'snippets/'), "\n", ',', 'g'), 'snippets\\,', 'snippets,', 'g')
+" Fix snippet issue on Windows
+if has('win32') || has('win64')
+	let snippets_dir = substitute(substitute(globpath(&rtp, 'snippets/'), "\n", ',', 'g'), 'snippets\\,', 'snippets,', 'g')
+end
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
