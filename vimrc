@@ -8,6 +8,9 @@ set nocompatible
 set guioptions-=T  " Hide gVim toolbar
 set guioptions-=m  " Hide gVim menu bar
 
+scriptencoding utf-8
+set encoding=utf-8
+
 set hidden  " allow unsaved background buffers and remember marks/undo for them
 set number  " turn on line numbering
 set laststatus=2  " always show command line
