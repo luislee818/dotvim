@@ -114,10 +114,6 @@
 	path = bundle/vim-scala
 	url = http://github.com/derekwyatt/vim-scala.git
 	ignore = dirty
-[submodule "vim-repeat"]
-	path = vim-repeat
-	url = http://github.com/tpope/vim-repeat.git
-	ignore = dirty
 [submodule "bundle/vim-ruby"]
 	path = bundle/vim-ruby
 	url = http://github.com/vim-ruby/vim-ruby.git
