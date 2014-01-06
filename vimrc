@@ -161,10 +161,10 @@ nnoremap <leader>rn :call NumberToggle()<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTO-RESIZE SPLITS, FROM THOUGHTBOT VIM SCREENCAST
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set winwidth=84
-set winheight=8
-set winminheight=8
-set winheight=999
+" set winwidth=84
+" set winheight=8
+" set winminheight=8
+" set winheight=999
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ARROW KEYS ARE UNACCEPTABLE
@@ -206,6 +206,9 @@ let g:ctrlp_custom_ignore = {
 
 " vim-trailing-whitespace plugin
 nmap <leader>ws :FixWhitespace<CR>
+
+" disable GoldenView's default mappings
+let g:goldenview__enable_default_mapping = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
