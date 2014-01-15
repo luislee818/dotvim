@@ -26,12 +26,14 @@ set hlsearch  " turn on highlight for search
 set incsearch  " turn on incrementing search
 set ignorecase smartcase  " make searches case-sensitive only if they contain upper-case characters
 
-set tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab  "  tab settings
-autocmd FileType ruby setlocal expandtab  "  expandtab for Ruby files
-set listchars=tab:▸\ ,eol:¬  " Use the same symbols as TextMate for tabstops and EOLs
-
 syntax on  " enable syntax
 filetype plugin indent on  " enable filetype plugin
+
+set tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab  "  tab settings
+autocmd BufRead,BufNewFile *_spec.rb set filetype=rspec
+autocmd FileType ruby setlocal expandtab  "  expandtab for Ruby files
+autocmd FileType rspec setlocal expandtab  "  expandtab for RSpec files
+set listchars=tab:▸\ ,eol:¬  " Use the same symbols as TextMate for tabstops and EOLs
 
 set directory^=$HOME/.vim_swap//   "put all swap files together in one place
 
