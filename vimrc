@@ -152,7 +152,7 @@ map ,tt :set tabstop=4 shiftwidth=4 softtabstop=4 expandtab<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! NumberToggle()
 	if(&relativenumber == 1)
-		set number
+		set norelativenumber
 	else
 		set relativenumber
 	endif
