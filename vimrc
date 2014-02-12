@@ -35,7 +35,9 @@ autocmd FileType ruby setlocal expandtab  "  expandtab for Ruby files
 autocmd FileType rspec setlocal expandtab  "  expandtab for RSpec files
 set listchars=tab:▸\ ,eol:¬  " Use the same symbols as TextMate for tabstops and EOLs
 
-set directory^=$HOME/.vim_swap//   "put all swap files together in one place
+" swap file settings
+set noswapfile  "disable swap file
+"set directory=$HOME/.vim_swap//   "put all swap files together in one place
 
 " so fugitive.vim will work on Windows
 if has("win32") || has("win64")
