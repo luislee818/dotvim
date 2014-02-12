@@ -150,6 +150,9 @@ map <leader>sl :exec SolarizedLight()<cr>
 " set indentation to be four spaces
 map ,tt :set tabstop=4 shiftwidth=4 softtabstop=4 expandtab<cr>
 
+" toggle NERDTree pane
+map ,d :NERDTreeToggle<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle relativenumber
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
