@@ -80,7 +80,7 @@ set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Make saving file easier
+" Make saving and closing file easier
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 
