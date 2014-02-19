@@ -138,3 +138,7 @@
 	path = bundle/vim-airline
 	url = http://github.com/bling/vim-airline
 	ignore = dirty
+[submodule "bundle/tmuxline"]
+	path = bundle/tmuxline
+	url = http://github.com/edkolev/tmuxline.vim.git
+	ignore = dirty
