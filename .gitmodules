@@ -142,3 +142,7 @@
 	path = bundle/tmuxline
 	url = http://github.com/edkolev/tmuxline.vim.git
 	ignore = dirty
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = http://github.com/kchmck/vim-coffee-script.git
+	ignore = dirty
