@@ -31,6 +31,7 @@ filetype plugin indent on  " enable filetype plugin
 
 set tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab  "  tab settings
 autocmd BufRead,BufNewFile *_spec.rb set filetype=rspec
+autocmd BufRead,BufNewFile *.hamlc set filetype=haml
 autocmd FileType ruby setlocal expandtab  "  expandtab for Ruby files
 autocmd FileType rspec setlocal expandtab  "  expandtab for RSpec files
 set listchars=tab:▸\ ,eol:¬  " Use the same symbols as TextMate for tabstops and EOLs
