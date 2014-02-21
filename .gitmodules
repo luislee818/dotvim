@@ -146,3 +146,11 @@
 	path = bundle/vim-coffee-script
 	url = http://github.com/kchmck/vim-coffee-script.git
 	ignore = dirty
+[submodule "bundle/funcoo.vim"]
+	path = bundle/funcoo.vim
+	url = http://github.com/rizzatti/funcoo.vim.git
+	ignore = dirty
+[submodule "bundle/dash.vim"]
+	path = bundle/dash.vim
+	url = http://github.com/rizzatti/dash.vim.git
+	ignore = dirty
