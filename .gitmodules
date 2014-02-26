@@ -154,3 +154,7 @@
 	path = bundle/dash.vim
 	url = http://github.com/rizzatti/dash.vim.git
 	ignore = dirty
+[submodule "bundle/vim-exchange"]
+	path = bundle/vim-exchange
+	url = http://github.com/tommcdo/vim-exchange.git
+	ignore = dirty
