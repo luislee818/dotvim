@@ -34,6 +34,7 @@ autocmd BufRead,BufNewFile *_spec.rb set filetype=rspec
 autocmd BufRead,BufNewFile *.hamlc set filetype=haml
 autocmd FileType ruby setlocal expandtab  "  expandtab for Ruby files
 autocmd FileType rspec setlocal expandtab  "  expandtab for RSpec files
+autocmd FileType coffee setlocal expandtab  "  expandtab for CoffeeScript files
 set listchars=tab:▸\ ,eol:¬  " Use the same symbols as TextMate for tabstops and EOLs
 
 " swap file settings
