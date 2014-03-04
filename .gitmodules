@@ -162,3 +162,7 @@
 	path = bundle/emmet-vim
 	url = http://github.com/mattn/emmet-vim.git
 	ignore = dirty
+[submodule "bundle/vim-abolish"]
+	path = bundle/vim-abolish
+	url = http://github.com/tpope/vim-abolish.git
+	ignore = dirty
