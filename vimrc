@@ -114,7 +114,7 @@ function! MapC_N()
   nnoremap <c-n> :nohlsearch<cr>
 endfunction
 call MapC_N()
-nnoremap <leader><leader> <c-^>
+nnoremap <leader>a <c-^>
 
 " map ctrl+p/n to Up/Down (filters commands in history)
 cnoremap <C-p> <Up>
