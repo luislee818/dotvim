@@ -166,3 +166,7 @@
 	path = bundle/vim-abolish
 	url = http://github.com/tpope/vim-abolish.git
 	ignore = dirty
+[submodule "bundle/vim-cucumber"]
+	path = bundle/vim-cucumber
+	url = http://github.com/tpope/vim-cucumber.git
+	ignore = dirty
