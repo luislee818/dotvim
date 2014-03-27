@@ -170,3 +170,7 @@
 	path = bundle/vim-unimpaired
 	url = http://github.com/tpope/vim-unimpaired.git
 	ignore = dirty
+[submodule "bundle/vim-cucumber"]
+	path = bundle/vim-cucumber
+	url = http://github.com/tpope/vim-cucumber.git
+	ignore = dirty
