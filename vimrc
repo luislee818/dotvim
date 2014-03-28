@@ -35,6 +35,7 @@ autocmd BufRead,BufNewFile *.hamlc set filetype=haml
 autocmd FileType ruby setlocal expandtab  "  expandtab for Ruby files
 autocmd FileType rspec setlocal expandtab  "  expandtab for RSpec files
 autocmd FileType coffee setlocal expandtab  "  expandtab for CoffeeScript files
+autocmd FileType javascript setlocal expandtab  "  expandtab for JavaScript files
 set listchars=tab:▸\ ,eol:¬  " Use the same symbols as TextMate for tabstops and EOLs
 
 " swap file settings
