@@ -53,6 +53,9 @@ highlight Search cterm=underline  " use underline in color terminal for search m
 
 let mapleader=","
 
+" key binding for toggle paste
+set pastetoggle=<leader>p
+
 " Restore cursor position
 autocmd BufReadPost *
 	\ if line("'\"") > 1 && line("'\"") <= line("$") |
