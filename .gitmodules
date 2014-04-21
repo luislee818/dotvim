@@ -174,3 +174,7 @@
 	path = bundle/vim-cucumber
 	url = http://github.com/tpope/vim-cucumber.git
 	ignore = dirty
+[submodule "bundle/QFEnter"]
+	path = bundle/QFEnter
+	url = http://github.com/yssl/QFEnter.git
+	ignore = dirty
