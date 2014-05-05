@@ -2,10 +2,6 @@
 	path = bundle/fugitive
 	url = http://github.com/tpope/vim-fugitive.git
 	ignore = dirty
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = http://github.com/msanders/snipmate.vim.git
-	ignore = dirty
 [submodule "bundle/ragtag"]
 	path = bundle/ragtag
 	url = http://github.com/tpope/vim-ragtag.git
