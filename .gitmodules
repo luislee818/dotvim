@@ -174,3 +174,7 @@
 	path = bundle/QFEnter
 	url = http://github.com/yssl/QFEnter.git
 	ignore = dirty
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = http://github.com/luislee818/snipmate.vim.git
+	ignore = dirty
