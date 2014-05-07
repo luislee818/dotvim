@@ -112,6 +112,7 @@ nnoremap <c-l> <c-w>l
 
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
+imap <c-k> <space>-><space>
 
 " Clear the search buffer when hitting ctrl-n
 function! MapC_N()
