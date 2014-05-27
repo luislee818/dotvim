@@ -178,3 +178,7 @@
 	path = bundle/snipmate
 	url = http://github.com/luislee818/snipmate.vim.git
 	ignore = dirty
+[submodule "bundle/vim-bundler"]
+	path = bundle/vim-bundler
+	url = http://github.com/tpope/vim-bundler.git
+	ignore = dirty
