@@ -182,3 +182,7 @@
 	path = bundle/vim-bundler
 	url = http://github.com/tpope/vim-bundler.git
 	ignore = dirty
+[submodule "bundle/vim-rake"]
+	path = bundle/vim-rake
+	url = http://github.com/tpope/vim-rake.git
+	ignore = dirty
