@@ -91,12 +91,19 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>qq :qa<cr>
 
-" Make setting file type to scheme easier (chose 'r' because it's from Dr. Racket)
-nnoremap <leader>r :set ft=scheme<cr>
-
 " Make copying to system clipboard easier
 map <leader>y "+y
+
+" Show invisible characters
 nmap <leader>l :set list!<CR>  " Shortcut to rapidly toggle `set list`
+
+" Insert a hash rocket with <c-l>
+imap <c-l> <space>=><space>
+" Insert a stabby lambda with <c-k>
+imap <c-k> <space>-><space>
+
+" Open Gst window in fugitive
+nnoremap <leader>f :Gst<cr>
 
 " Use k, j, 0 and $ linewise
 noremap  <buffer> <silent> k gk
@@ -109,10 +116,6 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-
-" Insert a hash rocket with <c-l>
-imap <c-l> <space>=><space>
-imap <c-k> <space>-><space>
 
 " Clear the search buffer when hitting ctrl-n
 function! MapC_N()
