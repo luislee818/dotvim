@@ -138,9 +138,6 @@ nnoremap <Space> za
 map <leader>fi :setlocal foldmethod=indent<cr>
 map <leader>fs :setlocal foldmethod=syntax<cr>
 
-" Toggle spell checking on and off with `<leader>s`
-nmap <silent> <leader>s :set spell!<CR>
-
 " Set region to American English
 set spelllang=en_us
 
@@ -198,7 +195,8 @@ map <Down> <Nop>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
-map <leader>v :view %%
+map <leader>s :split %%
+map <leader>v :vnew %%
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CONFIGS FOR PLUGINS
@@ -239,13 +237,6 @@ let g:tmuxline_separators = {
 
 " vim-coffee-script and coffee-lint
 let coffee_linter = '/usr/local/bin/coffeelint'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" OPEN FILES IN DIRECTORY OF CURRENT FILE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
-map <leader>e :edit %%
-map <leader>v :view %%
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
