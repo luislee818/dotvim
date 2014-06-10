@@ -139,7 +139,7 @@ map <leader>fi :setlocal foldmethod=indent<cr>
 map <leader>fs :setlocal foldmethod=syntax<cr>
 
 " search word under cursor in Dash.app
-nmap <silent> <c-i> <Plug>DashSearch
+nmap <silent> <c-\> <Plug>DashSearch
 
 " Set region to American English
 set spelllang=en_us
@@ -243,7 +243,8 @@ let coffee_linter = '/usr/local/bin/coffeelint'
 
 " dash.vim
 let g:dash_map = {
-	\ 'coffee' : 'js'
+	\ 'ruby' : ['ruby', 'ruby19', 'rails', 'rails4'],
+	\ 'coffee' : ['js', 'underscore', 'angularjs', 'coffee']
 	\ }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
