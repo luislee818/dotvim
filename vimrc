@@ -138,6 +138,9 @@ nnoremap <Space> za
 map <leader>fi :setlocal foldmethod=indent<cr>
 map <leader>fs :setlocal foldmethod=syntax<cr>
 
+" search word under cursor in Dash.app
+nmap <silent> <c-i> <Plug>DashSearch
+
 " Set region to American English
 set spelllang=en_us
 
@@ -237,6 +240,11 @@ let g:tmuxline_separators = {
 
 " vim-coffee-script and coffee-lint
 let coffee_linter = '/usr/local/bin/coffeelint'
+
+" dash.vim
+let g:dash_map = {
+	\ 'coffee' : 'js'
+	\ }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
