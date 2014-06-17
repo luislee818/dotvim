@@ -86,10 +86,6 @@
 	path = bundle/specky_rspec_fork
 	url = http://github.com/luislee818/Specky.git
 	ignore = dirty
-[submodule "bundle/capslock"]
-	path = bundle/capslock
-	url = https://github.com/tpope/vim-capslock
-	ignore = dirty
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
