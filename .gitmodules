@@ -186,3 +186,7 @@
 	path = bundle/vim-rbenv
 	url = http://github.com/tpope/vim-rbenv.git
 	ignore = dirty
+[submodule "bundle/vim-dispatch"]
+	path = bundle/vim-dispatch
+	url = http://github.com/tpope/vim-dispatch.git
+	ignore = dirty
