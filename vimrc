@@ -165,6 +165,10 @@ map ,tt :set tabstop=4 shiftwidth=4 softtabstop=4 expandtab<cr>
 " toggle NERDTree pane
 map ,d :NERDTreeToggle<cr>
 
+" open and close quick fix window (for vim-dispatch)
+nmap <leader>co :Copen<cr>
+nmap <leader>cl :cclose<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle relativenumber
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
