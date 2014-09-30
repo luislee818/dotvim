@@ -190,3 +190,7 @@
 	path = bundle/vim-dispatch
 	url = http://github.com/tpope/vim-dispatch.git
 	ignore = dirty
+[submodule "bundle/vim-javascript"]
+	path = bundle/vim-javascript
+	url = http://github.com/pangloss/vim-javascript.git
+	ignore = dirty
