@@ -95,8 +95,8 @@ nnoremap <leader>qq :qa<cr>
 " Make copying to system clipboard easier
 map <leader>y "+y
 
-" Show invisible characters
-nmap <leader>l :set list!<CR>  " Shortcut to rapidly toggle `set list`
+" Show invisible characters - use vim-umipaired instead
+" nmap <leader>l :set list!<CR>  " Shortcut to rapidly toggle `set list`
 
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
@@ -123,7 +123,7 @@ function! MapC_N()
   nnoremap <c-n> :nohlsearch<cr>
 endfunction
 call MapC_N()
-nnoremap <leader>a <c-^>
+" nnoremap <leader>a <c-^>
 
 " map ctrl+p/n to Up/Down (filters commands in history)
 cnoremap <C-p> <Up>
@@ -201,10 +201,10 @@ map <Down> <Nop>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
-map <leader>e :edit %%
-map <leader>s :split %%
-map <leader>v :vnew %%
+" cnoremap %% <C-R>=expand('%:h').'/'<cr>
+" map <leader>e :edit %%
+" map <leader>s :split %%
+" map <leader>v :vnew %%
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CONFIGS FOR PLUGINS
@@ -251,6 +251,13 @@ let g:dash_map = {
 	\ 'ruby' : ['ruby', 'ruby19', 'rails', 'rails4'],
 	\ 'coffee' : ['js', 'underscore', 'angularjs', 'coffee']
 	\ }
+
+" RSpec.vim mappings
+let g:rspec_command="Dispatch bin/rspec {spec}"
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE

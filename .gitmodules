@@ -198,3 +198,7 @@
 	path = bundle/vim-jsx
 	url = http://github.com/mxw/vim-jsx.git
 	ignore = dirty
+[submodule "bundle/vim-rspec"]
+	path = bundle/vim-rspec
+	url = http://github.com/thoughtbot/vim-rspec.git
+	ignore = dirty
