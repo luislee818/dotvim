@@ -29,7 +29,7 @@ set ignorecase smartcase  " make searches case-sensitive only if they contain up
 syntax on  " enable syntax
 filetype plugin indent on  " enable filetype plugin
 
-set tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab  "  tab settings
+set tabstop=2 shiftwidth=2 softtabstop=2 expandtab  "  (no)tab settings
 autocmd BufRead,BufNewFile *_spec.rb set filetype=rspec
 autocmd BufRead,BufNewFile *.hamlc set filetype=haml
 autocmd BufRead,BufNewFile ~/Release/* set background=light  "  change background color for Release
@@ -391,6 +391,34 @@ endif
 " map command to custom script for TFS shortcuts
 command! Tco !t co "%:p"
 command! Tundo !t undo "%:p"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PUT SCRIPTNAMES RESULT INTO SCRATCH BUFFER
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! s:Scratch (command, ...)
+   redir => lines
+   let saveMore = &more
+   set nomore
+   execute a:command
+   redir END
+   let &more = saveMore
+   call feedkeys("\<cr>")
+   new | setlocal buftype=nofile bufhidden=hide noswapfile
+   put=lines
+   if a:0 > 0
+      execute 'vglobal/'.a:1.'/delete'
+   endif
+   if a:command == 'scriptnames'
+      %substitute#^[[:space:]]*[[:digit:]]\+:[[:space:]]*##e
+   endif
+   silent %substitute/\%^\_s*\n\|\_s*\%$
+   let height = line('$') + 3
+   execute 'normal! z'.height."\<cr>"
+   0
+endfunction
+
+command! -nargs=? Scriptnames call <sid>Scratch('scriptnames', <f-args>)
+command! -nargs=+ Scratch call <sid>Scratch(<f-args>)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " JUNKDRAWER
