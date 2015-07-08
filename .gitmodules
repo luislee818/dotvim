@@ -202,3 +202,7 @@
 	path = bundle/vim-rspec
 	url = http://github.com/thoughtbot/vim-rspec.git
 	ignore = dirty
+[submodule "bundle/vim-jade"]
+	path = bundle/vim-jade
+	url = http://github.com/digitaltoad/vim-jade.git
+	ignore = dirty
