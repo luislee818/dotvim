@@ -206,3 +206,7 @@
 	path = bundle/vim-jade
 	url = http://github.com/digitaltoad/vim-jade.git
 	ignore = dirty
+[submodule "bundle/repmo"]
+	path = bundle/repmo
+	url = http://github.com/luislee818/repmo.vim.git
+	ignore = dirty
