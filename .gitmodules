@@ -118,10 +118,6 @@
 	path = bundle/vim-textobj-user
 	url = http://github.com/kana/vim-textobj-user.git
 	ignore = dirty
-[submodule "bundle/GoldenView"]
-	path = bundle/GoldenView
-	url = http://github.com/zhaocai/GoldenView.Vim.git
-	ignore = dirty
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = http://github.com/tpope/vim-repeat.git
