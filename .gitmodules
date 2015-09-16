@@ -206,3 +206,7 @@
 	path = bundle/repmo
 	url = http://github.com/luislee818/repmo.vim.git
 	ignore = dirty
+[submodule "bundle/GoldenView"]
+	path = bundle/GoldenView
+	url = http://github.com/zhaocai/GoldenView.Vim.git
+	ignore = dirty
