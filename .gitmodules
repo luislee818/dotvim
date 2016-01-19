@@ -210,3 +210,7 @@
 	path = bundle/GoldenView
 	url = http://github.com/zhaocai/GoldenView.Vim.git
 	ignore = dirty
+[submodule "bundle/vim-elixir"]
+	path = bundle/vim-elixir
+	url = http://github.com/elixir-lang/vim-elixir.git
+	ignore = dirty
