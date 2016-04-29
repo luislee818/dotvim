@@ -131,6 +131,7 @@ call MapC_N()
 " map ctrl+p/n to Up/Down (filters commands in history)
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+let g:ctrlp_user_command='ag %s -l --nocolor --hidden -g ""'
 
 " map leader-U to upcase the current word
 nmap <leader>U gUiw
