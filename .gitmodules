@@ -214,3 +214,6 @@
 	path = bundle/vim-elixir
 	url = http://github.com/elixir-lang/vim-elixir.git
 	ignore = dirty
+[submodule "bundle/editorconfig-vim"]
+	path = bundle/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
