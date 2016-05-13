@@ -32,11 +32,12 @@ filetype plugin indent on  " enable filetype plugin
 set tabstop=2 shiftwidth=2 softtabstop=2 expandtab  "  (no)tab settings
 autocmd BufRead,BufNewFile *_spec.rb set filetype=rspec
 autocmd BufRead,BufNewFile *.hamlc set filetype=haml
+autocmd BufRead,BufNewFile *.es6 set filetype=javascript  " for ES6 files
 autocmd BufRead,BufNewFile ~/Release/* set background=light  "  change background color for Release
 autocmd FileType ruby setlocal expandtab  "  expandtab for Ruby files
 autocmd FileType rspec setlocal expandtab  "  expandtab for RSpec files
 autocmd FileType coffee setlocal expandtab  "  expandtab for CoffeeScript files
-autocmd FileType javascript setlocal expandtab  "  expandtab for JavaScript files
+autocmd FileType javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 "  for JavaScript files
 set listchars=tab:▸\ ,eol:¬  " Use the same symbols as TextMate for tabstops and EOLs
 
 " swap file settings
