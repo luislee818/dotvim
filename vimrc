@@ -38,6 +38,7 @@ autocmd FileType ruby setlocal expandtab  "  expandtab for Ruby files
 autocmd FileType rspec setlocal expandtab  "  expandtab for RSpec files
 autocmd FileType coffee setlocal expandtab  "  expandtab for CoffeeScript files
 autocmd FileType javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 "  for JavaScript files
+autocmd FileType html setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 "  for Html files
 set listchars=tab:▸\ ,eol:¬  " Use the same symbols as TextMate for tabstops and EOLs
 
 " swap file settings
@@ -216,7 +217,7 @@ map <Down> <Nop>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic plugin
 let g:syntastic_auto_loc_list=1  " Syntastic: automatically open and close quick fix window for errors
-let g:syntastic_javascript_checker="jshint"  " Syntastic: use JSHint in Syntastic plugin
+let g:syntastic_javascript_checkers=["eslint"]
 let g:syntastic_html_checkers=['']
 
 " Tagbar plugin
