@@ -217,6 +217,12 @@
 [submodule "bundle/editorconfig-vim"]
 	path = bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+	ignore = dirty
 [submodule "bundle/syntastic-local-eslint"]
 	path = bundle/syntastic-local-eslint
 	url = http://github.com/mtscout6/syntastic-local-eslint.vim.git
+	ignore = dirty
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = http://github.com/airblade/vim-gitgutter.git
+	ignore = dirty
