@@ -245,3 +245,6 @@
 [submodule "bundle/my-snippets"]
 	path = bundle/my-snippets
 	url = https://github.com/luislee818/my-snippets.git
+[submodule "bundle/vim-airline-themes"]
+	path = bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
