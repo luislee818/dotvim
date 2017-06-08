@@ -39,6 +39,7 @@ autocmd FileType rspec setlocal expandtab  "  expandtab for RSpec files
 autocmd FileType coffee setlocal expandtab  "  expandtab for CoffeeScript files
 autocmd FileType javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 "  for JavaScript files
 autocmd FileType html setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 "  for Html files
+autocmd FileType elm setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 "  for elm files
 set listchars=tab:▸\ ,eol:¬  " Use the same symbols as TextMate for tabstops and EOLs
 
 " swap file settings
