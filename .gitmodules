@@ -242,3 +242,6 @@
 [submodule "bundle/vim-addon-mw-utils"]
 	path = bundle/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/my-snippets"]
+	path = bundle/my-snippets
+	url = https://github.com/luislee818/my-snippets.git
