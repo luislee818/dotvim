@@ -222,10 +222,6 @@
 	path = bundle/vim-gitgutter
 	url = http://github.com/airblade/vim-gitgutter.git
 	ignore = dirty
-[submodule "bundle/vim-wakatime"]
-	path = bundle/vim-wakatime
-	url = git://github.com/wakatime/vim-wakatime.git
-	ignore = dirty
 [submodule "bundle/elm"]
 	path = bundle/elm
 	url = https://github.com/lambdatoast/elm.vim.git
