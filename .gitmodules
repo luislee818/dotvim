@@ -250,3 +250,6 @@
 [submodule "bundle/apiblueprint"]
 	path = bundle/apiblueprint
 	url = https://github.com/kylef/apiblueprint.vim.git
+[submodule "bundle/typescript-vim"]
+	path = bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
