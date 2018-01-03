@@ -108,6 +108,10 @@ map <leader>y "+y
 imap <c-l> <space>=><space>
 " Insert a stabby lambda with <c-k>
 imap <c-k> <space>-><space>
+" Insert a pipe with <c-p>
+imap <c-p> \|><space>
+" Insert a backward pipe with <c-u>
+imap <c-u> <space><\|<space>
 
 " Open Gst window in fugitive
 nnoremap <leader>f :Gst<cr>
