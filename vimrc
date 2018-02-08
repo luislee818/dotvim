@@ -42,6 +42,10 @@ autocmd FileType html setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 " 
 autocmd FileType elm setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 "  for elm files
 set listchars=tab:▸\ ,eol:¬  " Use the same symbols as TextMate for tabstops and EOLs
 
+
+autocmd BufWritePost *.exs silent :!mix format %
+autocmd BufWritePost *.ex silent :!mix format %
+
 " swap file settings
 set noswapfile  "disable swap file
 "set directory=$HOME/.vim_swap//   "put all swap files together in one place
@@ -112,6 +116,8 @@ map <leader>y "+y
 imap <c-l> <space>=><space>
 " Insert a stabby lambda with <c-k>
 imap <c-k> <space>-><space>
+" Insert a pipe operator with <c-p>
+imap <c-p> \|><space>
 
 " Open Gst window in fugitive
 nnoremap <leader>f :Gst<cr>
