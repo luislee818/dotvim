@@ -118,6 +118,7 @@ imap <c-l> <space>=><space>
 imap <c-k> <space>-><space>
 " Insert a pipe operator with <c-p>
 imap <c-p> \|><space>
+imap <c-r> <space><\|<space>
 
 " Open Gst window in fugitive
 nnoremap <leader>f :Gst<cr>
