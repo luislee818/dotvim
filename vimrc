@@ -1,5 +1,8 @@
 call pathogen#infect()
 
+" ignore plugin
+set runtimepath-=~/.vim/bundle/ctrlp
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -26,6 +29,10 @@ set hlsearch  " turn on highlight for search
 set incsearch  " turn on incrementing search
 set ignorecase smartcase  " make searches case-sensitive only if they contain upper-case characters
 
+" grep settings
+" set grepprg=rg\ -H\ --no-heading\ --vimgrep
+" set grepformat=$f:$l:%c:%m
+
 syntax on  " enable syntax
 filetype plugin indent on  " enable filetype plugin
 
@@ -49,6 +56,15 @@ autocmd BufWritePost *.ex silent :!mix format %
 " swap file settings
 set noswapfile  "disable swap file
 "set directory=$HOME/.vim_swap//   "put all swap files together in one place
+
+set undofile
+if !has('nvim')
+	set undodir=~/.vim/undo
+endif
+augroup vimrc
+	autocmd!
+	autocmd BufWritePre /tmp/* setlocal noundofile
+augroup END
 
 " so fugitive.vim will work on Windows
 if has("win32") || has("win64")
@@ -187,6 +203,21 @@ map ,d :NERDTreeToggle<cr>
 nmap <leader>co :Copen<cr>
 nmap <leader>cl :cclose<cr>
 
+if has('nvim')
+  " terminal mode mapping
+  " tnoremap <C-v><Esc> <Esc>
+  " tnoremap <Esc> <C-\><C-n>
+  tnoremap <C-[> <C-\><C-n>
+  " tnoremap <c-h> <c-\><c-n><c-w>h
+  " tnoremap <c-j> <c-\><c-n><c-w>j
+  " tnoremap <c-k> <c-\><c-n><c-w>k
+  " tnoremap <c-l> <c-\><c-n><c-w>l
+
+  " highlight terminal cursor
+  highlight! link TermCursor Cursor
+  highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
+endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle relativenumber
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -244,10 +275,54 @@ let Tlist_Show_One_File=1  " Taglist-plus: show tags for teh current buffer only
 let Tlist_GainFocus_On_ToggleOpen=1  " Taglist-plus: move focus to taglist when :TlistToggle command was invoked
 
 " ctrlp plugin - ignore the following file/dir
-let g:ctrlp_custom_ignore = {
-\	'dir': '\.git$\|build$\|docs$\|node_modules$',
-\	'file': '\.exe$\|\.dll$\|\.pdb$\|\.jpg$\|\.png$\|\.gif$\|\.pdf$\|\.swp$'
-\	}
+" let g:ctrlp_custom_ignore = {
+" \	'dir': '\.git$\|build$\|docs$\|node_modules$',
+" \	'file': '\.exe$\|\.dll$\|\.pdb$\|\.jpg$\|\.png$\|\.gif$\|\.pdf$\|\.swp$'
+" \	}
+let g:ctrlp_map = '<c-m>'
+
+" FZF
+nnoremap <C-p> :<C-u>Files<CR>
+nnoremap <C-p><C-f> :<C-u>Buffers<CR>
+" TODO: how to let fzf accept ctrl-f
+" let g:fzf_action = {
+"   \ 'ctrl-f': 'Buffers',
+"   \ 'ctrl-t': 'tab split',
+"   \ 'ctrl-x': 'split',
+"   \ 'ctrl-v': 'vsplit' }
+
+" For JavaScript files, use `eslint` (and only eslint)
+ let g:ale_linters = {
+ \   'javascript': ['eslint'],
+ \ }
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_save = 1  " default
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_filetype_changed = 0
+" Mappings in the style of unimpaired-next
+" nmap <silent> [W <Plug>(ale_first)
+" nmap <silent> [w <Plug>(ale_previous)
+" nmap <silent> ]w <Plug>(ale_next)
+" nmap <silent> ]W <Plug>(ale_last)
+
+let g:grepper       = {}
+let g:grepper.tools = ['rg', 'git', 'grep']
+function! SetupCommandAlias(input, output)
+    exec 'cabbrev <expr> '.a:input
+            \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:input.'")'
+            \ .'? ("'.a:output.'") : ("'.a:input.'"))'
+endfunction
+call SetupCommandAlias("rg", "GrepperRg")
+
+" Search for the current word
+nnoremap <Leader>* :Grepper -cword -noprompt<CR>
+
+" Search for the current selection
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
+
+" vim-test
+let test#strategy = "dispatch"
 
 " vim-trailing-whitespace plugin
 nmap <leader>ws :FixWhitespace<CR>
