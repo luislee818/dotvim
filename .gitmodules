@@ -50,9 +50,6 @@
 	path = bundle/ctrlp
 	url = http://github.com/kien/ctrlp.vim.git
 	ignore = dirty
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = http://github.com/scrooloose/syntastic.git
 	ignore = dirty
 [submodule "bundle/jshint"]
 	path = bundle/jshint
