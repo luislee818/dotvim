@@ -294,6 +294,7 @@ nnoremap <C-p><C-f> :<C-u>Buffers<CR>
 " For JavaScript files, use `eslint` (and only eslint)
  let g:ale_linters = {
  \   'javascript': ['eslint'],
+ \   'typescript': ['tslint']
  \ }
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_save = 1  " default
@@ -511,6 +512,21 @@ endfunction
 
 command! -nargs=? Scriptnames call <sid>Scratch('scriptnames', <f-args>)
 command! -nargs=+ Scratch call <sid>Scratch(<f-args>)
+
+" Enable seeing-is-believing mappings only for Ruby
+augroup seeingIsBelievingSettings
+  autocmd!
+
+  autocmd FileType ruby nmap <buffer> <leader>rb <Plug>(seeing-is-believing-mark-and-run)
+  autocmd FileType ruby xmap <buffer> <leader>rb <Plug>(seeing-is-believing-mark-and-run)
+
+  autocmd FileType ruby nmap <buffer> <leader>rm <Plug>(seeing-is-believing-mark)
+  autocmd FileType ruby xmap <buffer> <leader>rm <Plug>(seeing-is-believing-mark)
+  autocmd FileType ruby imap <buffer> <leader>rm <Plug>(seeing-is-believing-mark)
+
+  autocmd FileType ruby nmap <buffer> <leader>rr <Plug>(seeing-is-believing-run)
+  autocmd FileType ruby imap <buffer> <leader>rr <Plug>(seeing-is-believing-run)
+augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " JUNKDRAWER
