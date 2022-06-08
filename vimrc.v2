@@ -294,7 +294,7 @@ set foldlevelstart=99
 highlight Folded  ctermfg=cyan ctermbg=black
 
 " Toggle on and off...
-nmap <silent> <expr>  zz  FS_ToggleFoldAroundSearch({'context':1})
+nmap <silent> <expr> zf FS_ToggleFoldAroundSearch({'context':1})
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
