@@ -25,6 +25,7 @@ Plug 'bronson/vim-visual-star-search'
 Plug 'tommcdo/vim-exchange'
 Plug 'ngmy/vim-rubocop'
 Plug 'noprompt/vim-yardoc'
+Plug 'gavocanov/foldsearches.vim'
 
 call plug#end()
 
@@ -284,6 +285,16 @@ let g:tmuxline_separators = {
 
 let g:vimrubocop_keymap = 0
 nmap <Leader>r :RuboCop<CR>
+
+"=====[ Search folding ]=====================
+" Don't start new buffers folded
+set foldlevelstart=99
+
+" Highlight folds
+highlight Folded  ctermfg=cyan ctermbg=black
+
+" Toggle on and off...
+nmap <silent> <expr>  zz  FS_ToggleFoldAroundSearch({'context':1})
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
