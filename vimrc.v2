@@ -26,6 +26,7 @@ Plug 'tommcdo/vim-exchange'
 Plug 'ngmy/vim-rubocop'
 Plug 'noprompt/vim-yardoc'
 Plug 'gavocanov/foldsearches.vim'
+Plug 'jparise/vim-graphql'
 
 call plug#end()
 
