@@ -20,13 +20,14 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-abolish'
-Plug 'wakatime/vim-wakatime'
 Plug 'bronson/vim-visual-star-search'
 Plug 'tommcdo/vim-exchange'
 Plug 'ngmy/vim-rubocop'
 Plug 'noprompt/vim-yardoc'
 Plug 'gavocanov/foldsearches.vim'
 Plug 'jparise/vim-graphql'
+Plug 'leafOfTree/vim-svelte-plugin'
+Plug 'github/copilot.vim'
 
 call plug#end()
 
@@ -338,6 +339,12 @@ endfunction
 
 " map ,g to toggle guide line
 nnoremap <Leader>g :call <SID>ToggleColorColumn()<cr>
+
+" copilot
+imap <C-K> <Plug>(copilot-next)
+imap <C-J> <Plug>(copilot-previous)
+imap <C-L> <Plug>(copilot-accept-word)
+imap <C-\> <Plug>(copilot-suggest)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PUT SCRIPTNAMES RESULT INTO SCRATCH BUFFER
